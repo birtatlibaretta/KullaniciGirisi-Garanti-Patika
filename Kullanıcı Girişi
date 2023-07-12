@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class ŞifreSıfırlama{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String şifre, yeniŞifre;
+
+        System.out.println("Şifrenizi Giriniz: ");
+        şifre = sc.nextLine();
+
+        if (şifre.isEmpty()) {
+            System.out.println("Şifre Boş Bırakılamaz");
+            return;
+        }
+
+        System.out.println("Şifrenizi Sıfırlamak İster Misiniz? (E/H) ");
+        String seçim = sc.nextLine();
+
+        if (seçim.equals("E")) {
+            System.out.println("Yeni Şifrenizi Giriniz: ");
+            yeniŞifre = sc.nextLine();
+
+            if (yeniŞifre.equals(şifre)) {
+                System.out.println("Şifreniz Oluşturulamadı, Lütfen Başka Bir Şifre Deneyin");
+            } else {
+                System.out.println("Şifre Oluşturuldu");
+            }
+        } else {
+            System.out.println("Şifre Sıfırlanamadı!");
+        }
+    }
+}
